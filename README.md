@@ -21,11 +21,11 @@
 
 ### a searching by model of car:
 
-![change](./files/search.png)
+![search](./files/search.jpg)
 
 ### select car model wich you want to change data in:
 
-![sort](./files/change.jpg)
+![change](./files/change.png)
 
 ### modal buttons open the same modal window with different content inside:
 
