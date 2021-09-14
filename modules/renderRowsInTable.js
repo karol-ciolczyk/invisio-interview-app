@@ -1,6 +1,9 @@
 import { addDeleteActionForButton } from "./addDeleteActionForButton.js";
+import { removeRows } from "./removeRows.js";
 
 export const renderRowsInTable = function (cars) {
+  removeRows();
+
   const tBody = document.querySelector("tbody");
 
   cars.forEach((car, index) => {

@@ -1,6 +1,7 @@
 import { renderRowsInTable } from "./renderRowsInTable.js";
-import { removeRows } from "./removeRows.js";
+// import { removeRows } from "./removeRows.js";
 import { addOptionsIntoSelectElement } from "./addOptionsIntoSelect.js";
+// import { addCarsToLocalStorage } from "./addCarsToLocalStorage.js";
 
 export const cars = (function () {
   const cars = [
@@ -12,9 +13,9 @@ export const cars = (function () {
     },
     {
       id: 1,
-      brand: "mclaren",
-      model: "01",
-      year: "2000",
+      brand: "opel",
+      model: "insignia",
+      year: "2019",
     },
     {
       id: 2,
@@ -24,9 +25,9 @@ export const cars = (function () {
     },
     {
       id: 3,
-      brand: "tarpan",
-      model: "tar-33",
-      year: "1877",
+      brand: "ford",
+      model: "mondeo",
+      year: "2005",
     },
     {
       id: 4,
@@ -34,22 +35,48 @@ export const cars = (function () {
       model: "california",
       year: "2020",
     },
+    {
+      id: 5,
+      brand: "mercedes",
+      model: "a-class",
+      year: "2018",
+    },
+    {
+      id: 6,
+      brand: "toyota",
+      model: "rav3",
+      year: "2000",
+    },
+    {
+      id: 6,
+      brand: "ford",
+      model: "focus",
+      year: "2019",
+    },
+    {
+      id: 7,
+      brand: "opel",
+      model: "vivaro",
+      year: "2005",
+    },
   ];
 
   function addCar(object) {
     const id = cars.length;
     cars.push({ id, ...object });
     console.log(cars);
-    removeRows();
+    // removeRows();
     renderRowsInTable(cars);
     addOptionsIntoSelectElement(cars);
+    // addCarsToLocalStorage(cars);
   }
   function removeCar(id) {
     const elementToRemove = cars.findIndex((el) => el.id === id);
     cars.splice(elementToRemove, 1);
-    removeRows();
+    // removeRows();
     renderRowsInTable(cars);
     addOptionsIntoSelectElement(cars);
+    // addCarsToLocalStorage(cars);
   }
   function sort(viaWhat, direction) {
     cars.sort((car1, car2) => {
@@ -60,23 +87,25 @@ export const cars = (function () {
         return car1[`${viaWhat}`] > car2[`${viaWhat}`] ? 1 : -1;
       }
     });
-    removeRows();
+    // removeRows();
     renderRowsInTable(cars);
     addOptionsIntoSelectElement(cars);
+    // addCarsToLocalStorage(cars);
   }
   function findModel(string) {
     const filteredCars = cars.filter((car) =>
       car.model.includes(string.toLowerCase())
     );
-    removeRows();
+    // removeRows();
     renderRowsInTable(filteredCars);
   }
   function changeCar(newCar, carId) {
     const carIndex = cars.findIndex((car) => car.id === +carId);
     cars[carIndex] = { ...cars[carIndex], id: +carId, ...newCar };
     addOptionsIntoSelectElement(cars);
-    removeRows();
+    // removeRows();
     renderRowsInTable(cars);
+    // addCarsToLocalStorage(cars);
   }
 
   return { addCar, removeCar, sort, findModel, changeCar, cars };
