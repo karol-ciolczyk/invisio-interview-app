@@ -6,7 +6,8 @@ export const addOptionsIntoSelectElement = function (cars) {
   options.forEach((option) => option.remove());
   const firstOption = document.createElement("option");
   firstOption.setAttribute("selected", "");
-  firstOption.textContent = "choose model to change";
+  firstOption.textContent = "- select car to change data -";
+  firstOption.style.color = "#b8b8b8";
   selectElement.append(firstOption);
   ///////////////////////////////////////////////////////////////////
 

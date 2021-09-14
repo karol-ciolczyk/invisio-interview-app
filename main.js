@@ -65,10 +65,13 @@ selectElement.addEventListener("change", (event) => {
   const modelInput = document.querySelector("#model");
   const yearInput = document.querySelector("#year");
 
+  // initial state when first option selected
+  const isInitialState = event.target.value === "- select car to change data -";
+
   // fill inputs by the selected car-data
   carId = event.target.value;
   const car = cars.cars.find((car) => car.id === +carId);
-  brandInput.value = car.brand;
-  modelInput.value = car.model;
-  yearInput.value = car.year;
+  brandInput.value = isInitialState ? "" : car.brand;
+  modelInput.value = isInitialState ? "" : car.model;
+  yearInput.value = isInitialState ? "" : car.year;
 });
