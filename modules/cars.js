@@ -1,5 +1,4 @@
 import { renderRowsInTable } from "./renderRowsInTable.js";
-// import { removeRows } from "./removeRows.js";
 import { addOptionsIntoSelectElement } from "./addOptionsIntoSelect.js";
 // import { addCarsToLocalStorage } from "./addCarsToLocalStorage.js";
 
@@ -65,7 +64,6 @@ export const cars = (function () {
     const id = cars.length;
     cars.push({ id, ...object });
     console.log(cars);
-    // removeRows();
     renderRowsInTable(cars);
     addOptionsIntoSelectElement(cars);
     // addCarsToLocalStorage(cars);
@@ -73,7 +71,6 @@ export const cars = (function () {
   function removeCar(id) {
     const elementToRemove = cars.findIndex((el) => el.id === id);
     cars.splice(elementToRemove, 1);
-    // removeRows();
     renderRowsInTable(cars);
     addOptionsIntoSelectElement(cars);
     // addCarsToLocalStorage(cars);
@@ -87,7 +84,6 @@ export const cars = (function () {
         return car1[`${viaWhat}`] > car2[`${viaWhat}`] ? 1 : -1;
       }
     });
-    // removeRows();
     renderRowsInTable(cars);
     addOptionsIntoSelectElement(cars);
     // addCarsToLocalStorage(cars);
@@ -96,14 +92,12 @@ export const cars = (function () {
     const filteredCars = cars.filter((car) =>
       car.model.includes(string.toLowerCase())
     );
-    // removeRows();
     renderRowsInTable(filteredCars);
   }
   function changeCar(newCar, carId) {
     const carIndex = cars.findIndex((car) => car.id === +carId);
     cars[carIndex] = { ...cars[carIndex], id: +carId, ...newCar };
     addOptionsIntoSelectElement(cars);
-    // removeRows();
     renderRowsInTable(cars);
     // addCarsToLocalStorage(cars);
   }
