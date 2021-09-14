@@ -1,0 +1,39 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  color: rgb(32, 32, 32);
+  padding: 2rem;
+  background-color: rgb(238, 238, 238);
+}
+body {
+  padding: 5rem 0rem;
+}
+
+.material-icons {
+  vertical-align: bottom;
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+.material-icons:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.219);
+}
+
+.table-container {
+  width: 70%;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(0, 153, 255, 0.562);
+  box-shadow: 0.2rem 0.2rem 1.2rem 0.1rem rgba(0, 0, 0, 0.233);
+}
+.table {
+  color: #fff;
+  font-size: 1.6rem;
+}
