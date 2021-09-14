@@ -1,6 +1,6 @@
 # invisio-interview-app
 
-### tools used for project:
+### tools used in project:
 - html
 - css
 - javascript
