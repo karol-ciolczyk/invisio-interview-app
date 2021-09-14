@@ -73,7 +73,7 @@ export const cars = (function () {
   }
   function changeCar(newCar, carId) {
     const carIndex = cars.findIndex((car) => car.id === +carId);
-    cars[carIndex] = { id: +carId, ...newCar };
+    cars[carIndex] = { ...cars[carIndex], id: +carId, ...newCar };
     addOptionsIntoSelectElement(cars);
     removeRows();
     renderRowsInTable(cars);
