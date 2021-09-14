@@ -29,11 +29,12 @@ body {
   vertical-align: bottom;
   margin-left: 1rem;
   padding: 0.5rem;
+  border-radius: 50%;
 }
 .material-icons:hover {
   cursor: pointer;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.219);
+  transition: 250ms;
+  background-color: rgba(224, 224, 224, 0.534);
 }
 
 .table-container {
@@ -64,6 +65,7 @@ body {
 .btn-primary {
   background-color: #2e307a;
   border-color: #2e307a;
+  margin: 0.5rem 0rem;
 }
 .btn-primary:hover {
   background-color: #373a92cb;

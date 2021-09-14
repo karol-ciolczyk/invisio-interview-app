@@ -17,6 +17,7 @@ const inputs = document.querySelectorAll("input");
 let newCar = {};
 let carId = {};
 
+//// inputs listener to collect car data - change an existing or add a new car
 inputs.forEach((input) => {
   input.addEventListener("input", (event) => {
     const key = event.target.id;
@@ -29,12 +30,15 @@ inputs.forEach((input) => {
   });
 });
 
+//// form submits new car or change existing car
 form.addEventListener("submit", (event) => {
   const selectElement = document.querySelector(".form-select");
   const isChangeModal = selectElement.style.display === "block";
   event.preventDefault();
   if (isChangeModal) cars.changeCar(newCar, carId);
   if (!isChangeModal) cars.addCar(newCar);
+
+  form.reset();
 });
 
 //////// searching for particular model of car ////////////
@@ -44,8 +48,8 @@ searchInput.addEventListener("input", (event) => {
   const inputValue = event.target.value;
   cars.findModel(inputValue);
 });
-//////// searching for particular model of car - END - ////////////
 
+//// different modal content depending on which button was clicked
 const selectElement = document.querySelector(".form-select");
 let exampleModal = document.getElementById("exampleModal");
 exampleModal.addEventListener("show.bs.modal", function (event) {
@@ -68,7 +72,7 @@ selectElement.addEventListener("change", (event) => {
   // initial state when first option selected
   const isInitialState = event.target.value === "- select car to change data -";
 
-  // fill inputs by the selected car-data
+  // fill inputs by the selected car-data or clear data
   carId = event.target.value;
   const car = cars.cars.find((car) => car.id === +carId);
   brandInput.value = isInitialState ? "" : car.brand;
