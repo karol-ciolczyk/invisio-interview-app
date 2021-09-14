@@ -10,7 +10,19 @@ export const renderRowsInTable = function (cars) {
     const tdModel = document.createElement("td");
     const tdYear = document.createElement("td");
     const tdButton = document.createElement("td");
+    const tdCheckBox = document.createElement("td");
     const button = document.createElement("button");
+
+    /// bootstrap checkbox component
+    // const div = document.createElement("div");
+    // div.classList.add("form-check");
+    // const input = document.createElement("input");
+    // input.classList.add("form-check-input");
+    // input.setAttribute("type", "checkbox");
+    // input.setAttribute("value", "");
+    // input.setAttribute("data-id", `${car.id}`);
+    // div.append(input);
+    ///
 
     tr.classList.add(`car`);
     th.setAttribute("scope", "row");
@@ -30,6 +42,8 @@ export const renderRowsInTable = function (cars) {
     tr.append(tdYear);
     tdButton.append(button);
     tr.append(tdButton);
+    // tdCheckBox.append(input);
+    // tr.append(tdCheckBox);
     tBody.append(tr);
   });
 };

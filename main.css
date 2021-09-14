@@ -3,21 +3,25 @@
   padding: 0px;
   box-sizing: border-box;
 }
-
 html {
   font-size: 62.5%;
   color: rgb(32, 32, 32);
   padding: 2rem;
   background-color: rgb(238, 238, 238);
 }
+
 body {
   padding: 5rem 0rem;
+  font-size: 1.6rem;
 }
 .navbar {
   width: 70%;
   margin: auto;
   margin-bottom: 3rem;
   box-shadow: 0.2rem 0.2rem 1rem 0.1rem rgba(0, 0, 0, 0.158);
+}
+.search {
+  font-size: 1.4rem;
 }
 
 .material-icons {
@@ -50,4 +54,9 @@ body {
 
 .btn {
   font-size: 1.2rem;
+}
+
+/*modal - form-select*/
+.form-select {
+  display: none;
 }

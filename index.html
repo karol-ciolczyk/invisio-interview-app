@@ -20,16 +20,26 @@
   <body>
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-          data-bs-whatever="@getbootstrap"
-        >
-          Add new car
-        </button>
-
+        <div>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            data-action="Add New"
+          >
+            Add new car
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            data-action="Change"
+          >
+            Change data
+          </button>
+        </div>
         <div
           class="modal fade"
           id="exampleModal"
@@ -49,6 +59,9 @@
                 ></button>
               </div>
               <div class="modal-body">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>select car to change data</option>
+                </select>
                 <form>
                   <div class="mb-3">
                     <label for="brand" class="form-label">Brand</label>
@@ -61,16 +74,6 @@
                   <div class="mb-3">
                     <label for="year" class="form-label">Year</label>
                     <input type="text" class="form-control" id="year" />
-                  </div>
-                  <div class="mb-3 form-check">
-                    <input
-                      type="checkbox"
-                      class="form-check-input"
-                      id="exampleCheck1"
-                    />
-                    <label class="form-check-label" for="exampleCheck1"
-                      >Check me out</label
-                    >
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
                   <button
@@ -119,7 +122,7 @@
                 >sort</span
               >
             </th>
-            <th scope="col">delete element</th>
+            <th scope="col">delete car</th>
           </tr>
         </thead>
         <tbody>
