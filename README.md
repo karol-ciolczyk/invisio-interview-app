@@ -21,7 +21,7 @@
 
 ### a searching by model of car:
 
-![sort](./files/search.jpg)
+![change](./files/search.png)
 
 ### select car model wich you want to change data in:
 
