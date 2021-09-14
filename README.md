@@ -1,3 +1,3 @@
 # invisio-interview-app
 
-![](./invisio-interview-app/files/view.jpg)
+![](./files/view.jpg)
