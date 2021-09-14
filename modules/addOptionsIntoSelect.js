@@ -14,7 +14,6 @@ export const addOptionsIntoSelectElement = function (cars) {
     const option = document.createElement("option");
     option.setAttribute("value", `${car.id}`);
     option.textContent = `${car.brand} - ${car.model} - ${car.year}`;
-    console.log(option);
     selectElement.append(option);
   });
 };

@@ -66,12 +66,11 @@ export const cars = (function () {
     renderRowsInTable(filteredCars);
   }
   function changeCar(newCar, carId) {
-    console.log(newCar, carId);
     const carIndex = cars.findIndex((car) => car.id === +carId);
-    console.log(carIndex);
-    cars[carIndex] = "mustafa";
-    console.log(cars);
+    cars[carIndex] = { id: +carId, ...newCar };
     addOptionsIntoSelectElement(cars);
+    removeRows();
+    renderRowsInTable(cars);
   }
 
   return { addCar, removeCar, sort, findModel, changeCar, cars };
