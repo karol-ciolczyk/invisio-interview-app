@@ -1,3 +1,5 @@
+import { addDeleteActionForButton } from "./deleteRow.js";
+
 export const renderRowsInTable = function (cars) {
   const tBody = document.querySelector("tbody");
 
@@ -11,7 +13,6 @@ export const renderRowsInTable = function (cars) {
     const button = document.createElement("button");
 
     tr.classList.add(`car`);
-    tr.classList.add(`row-${index + 1}`);
     th.setAttribute("scope", "row");
     th.textContent = `${index + 1}`;
     tdBrand.textContent = car.brand;
@@ -20,6 +21,7 @@ export const renderRowsInTable = function (cars) {
     button.textContent = "delete";
     button.classList.add("btn");
     button.classList.add("btn-danger");
+    addDeleteActionForButton(button, tr);
 
     tr.append(th);
     tr.append(tdBrand);

@@ -1,6 +1,5 @@
 import { cars } from "./modules/cars.js";
 
-console.log(cars);
 cars.addCar({
   brand: "bmw",
   model: "m3",
@@ -26,7 +25,6 @@ let newCar = {};
 
 inputs.forEach((input) => {
   input.addEventListener("input", (event) => {
-    // console.log(event.target.id);
     const key = event.target.id;
     const value = event.target.value;
 
@@ -34,8 +32,6 @@ inputs.forEach((input) => {
       ...newCar,
       [key]: value,
     };
-
-    // console.log(newCar);
   });
 });
 
@@ -47,7 +43,6 @@ form.addEventListener("submit", (event) => {
 });
 
 //////// change sort icon, invoce sort method ////////
-
 const icons = document.querySelectorAll(".material-icons");
 
 icons.forEach((el) => {
@@ -79,3 +74,13 @@ icons.forEach((el) => {
     }
   });
 });
+//////// change sort icon, invoce sort method - END - ////////
+
+// const deleteButtons = document.querySelectorAll(".btn-danger");
+// const rows = document.querySelectorAll(".car");
+
+// deleteButtons.forEach((button) => {
+//   button.addEventListener("click", (event) => {
+//     console.log(event.target.dataset.rownumber);
+//   });
+// });
