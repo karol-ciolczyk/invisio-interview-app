@@ -28,6 +28,12 @@ export const cars = (function () {
       model: "tar-33",
       year: "1877",
     },
+    {
+      id: 4,
+      brand: "ferrari",
+      model: "california",
+      year: "2020",
+    },
   ];
 
   function addCar(object) {
