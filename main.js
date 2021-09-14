@@ -1,23 +1,10 @@
 import { cars } from "./modules/cars.js";
 
 cars.addCar({
-  brand: "bmw",
-  model: "m3",
-  year: "1995",
+  brand: "ferrari",
+  model: "california",
+  year: "2020",
 });
-cars.addCar({
-  brand: "audi",
-  model: "a3",
-  year: "1990",
-});
-cars.addCar({
-  brand: "tarpan",
-  model: "tar-33",
-  year: "1877",
-});
-
-cars.sort("brand");
-cars.sort("year");
 
 const form = document.querySelector("form");
 const inputs = document.querySelectorAll("input");
@@ -76,11 +63,9 @@ icons.forEach((el) => {
 });
 //////// change sort icon, invoce sort method - END - ////////
 
-// const deleteButtons = document.querySelectorAll(".btn-danger");
-// const rows = document.querySelectorAll(".car");
+const searchInput = document.querySelector(".search");
 
-// deleteButtons.forEach((button) => {
-//   button.addEventListener("click", (event) => {
-//     console.log(event.target.dataset.rownumber);
-//   });
-// });
+searchInput.addEventListener("input", (event) => {
+  const inputValue = event.target.value;
+  cars.findModel(inputValue);
+});

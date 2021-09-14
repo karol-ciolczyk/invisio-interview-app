@@ -1,4 +1,4 @@
-import { addDeleteActionForButton } from "./deleteRow.js";
+import { addDeleteActionForButton } from "./addDeleteActionForButton.js";
 
 export const renderRowsInTable = function (cars) {
   const tBody = document.querySelector("tbody");
@@ -21,7 +21,8 @@ export const renderRowsInTable = function (cars) {
     button.textContent = "delete";
     button.classList.add("btn");
     button.classList.add("btn-danger");
-    addDeleteActionForButton(button, tr);
+    button.setAttribute("data-id", `${car.id}`);
+    addDeleteActionForButton(button);
 
     tr.append(th);
     tr.append(tdBrand);

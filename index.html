@@ -18,75 +18,83 @@
     />
   </head>
   <body>
-    <div class="buttons-container">
-      <button type="button" class="btn btn-primary">Add new car</button>
-    </div>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          data-bs-whatever="@getbootstrap"
+        >
+          Add new car
+        </button>
 
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-      data-bs-whatever="@getbootstrap"
-    >
-      Add new car
-    </button>
-
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">New car</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="brand" class="form-label">Brand</label>
-                <input type="text" class="form-control" id="brand" />
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New car</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
               </div>
-              <div class="mb-3">
-                <label for="model" class="form-label">Model</label>
-                <input type="text" class="form-control" id="model" />
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="brand" class="form-label">Brand</label>
+                    <input type="text" class="form-control" id="brand" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="model" class="form-label">Model</label>
+                    <input type="text" class="form-control" id="model" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="year" class="form-label">Year</label>
+                    <input type="text" class="form-control" id="year" />
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1"
+                      >Check me out</label
+                    >
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </form>
               </div>
-              <div class="mb-3">
-                <label for="year" class="form-label">Year</label>
-                <input type="text" class="form-control" id="year" />
-              </div>
-              <div class="mb-3 form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1"
-                  >Check me out</label
-                >
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-            </form>
+            </div>
           </div>
         </div>
+        <form class="d-flex">
+          <input
+            class="form-control me-2 search"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </form>
       </div>
-    </div>
+    </nav>
 
     <div class="table-container">
       <table class="table table table-hover">
